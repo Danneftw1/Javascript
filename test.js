@@ -1,1 +1,2 @@
-print("hej")
+console.log("hello world!");
+
