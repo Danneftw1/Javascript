@@ -1,0 +1,31 @@
+/* src/components/ToDoItem.css */
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    margin-bottom: 10px;
+    width: 300px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .todo-item.completed span {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  .todo-item.selected {
+    background-color: #d3d3d3;
+  }
+  
+  .todo-item button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
