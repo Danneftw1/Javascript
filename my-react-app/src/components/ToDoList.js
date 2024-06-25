@@ -35,10 +35,18 @@ const ToDoList = () => {
       setSelectedIndex((prevIndex) => (prevIndex < todos.length - 1 ? prevIndex + 1 : prevIndex));
     } else if (event.key === 'Delete' && selectedIndex >= 0) {
       deleteTodo(selectedIndex);
+    } else if (event.key === 'Enter' && selectedIndex >= 0) {
+      toggleTodoCompleted(selectedIndex);
     }
   };
 
   const toggleTodo = (index) => {
+    const newTodos = [...todos];
+    newTodos[index].completed = !newTodos[index].completed;
+    setTodos(newTodos);
+  };
+
+  const toggleTodoCompleted = (index) => {
     const newTodos = [...todos];
     newTodos[index].completed = !newTodos[index].completed;
     setTodos(newTodos);
@@ -80,6 +88,7 @@ const ToDoList = () => {
             selected={index === selectedIndex}
             toggleTodo={toggleTodo}
             deleteTodo={deleteTodo}
+            toggleTodoCompleted={toggleTodoCompleted}
           />
         ))}
       </ul>

@@ -11,13 +11,22 @@
     cursor: pointer;
   }
   
+  .todo-item.completed {
+    background-color: #d3ffd3;
+  }
+  
   .todo-item.completed span {
     text-decoration: line-through;
     color: #888;
   }
   
-  .todo-item.selected {
-    background-color: #d3d3d3;
+  .todo-item .checkmark {
+    color: green;
+    margin-left: 10px;
+  }
+  
+  .todo-item.completed .checkmark {
+    display: inline;
   }
   
   .todo-item button {
@@ -28,4 +37,3 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  
